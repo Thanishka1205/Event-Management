@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-image: url('static/images/background.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: rgb(29, 2, 2);
+            margin-left: 10px;
+        }
+
+        .container {
+            background-color: #efeded;
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        img.logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        input[type=text]:focus {
+            background-color: rgba(88, 84, 84, 0.068);
+            color: black;
+            border: 2px solid #555555;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            width: 80%;
+            padding: 12px;
+            margin-bottom: 10px;
+        }
+
+        input[type=submit] {
+            background-color: rgba(88, 84, 84, 0.068);
+            color: black;
+            border: 2px solid #555555;
+            font-size: 16px;
+            padding: 20px 28px;
+            transition-duration: 0.4s;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        input[type=submit]:hover {
+            background-color: #a09f9f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <center>
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7a3ec529632909.55fc107b84b8c.png" class="logo" alt="Logo">
+            <br>
+            <h1 style="font-family: 'Monoton', cursive; font-size: 30px; font-weight: normal;">EVENT MANAGEMENT</h1>
+            <h2 style="font-family: 'Monoton', cursive; font-size: 30px; font-weight: normal;">ABC GROUND</h2>
+            <hr>
+            <h3 style="font-family: 'Monoton', cursive; font-size: 30px; font-weight: normal;">EVENT DETAILS</h3>
+            <hr>
+            <form method="POST" action="">
+                Enter event ID: <input type="text" name="search" /><br><br>
+                <input type="submit" value="SHOW" /><br><br>
+            </form>
+        </center>
+    </div>
+</body>
+</html>

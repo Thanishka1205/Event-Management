@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-image: url('static/images/background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: left;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        h1 {
+            color: rgb(29, 2, 2);
+            margin-left: 10px;
+        }
+
+        div {
+            margin: auto;
+            width: 50%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .link-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2ecc71;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .link-button:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7a3ec529632909.55fc107b84b8c.png" height="60"
+            width="60">
+        <h1 style="color: white;">EVENT MANAGEMENT SYSTEM</h1>
+    </header>
+    <nav>
+        <center>
+            <ul>
+                <li><a href="#list" >List Events</a></li>
+                <li><a href="#insert" >Add Event</a></li>
+                <li><a href="#update" >Update Event Details</a></li>
+                <li><a href="#delete" >Delete Event</a></li>
+                <li><a href="#select" >Event Details</a></li>
+            </ul>
+        </center>
+    </nav>
+
+    <div id="list">
+        <h2>List Events Section</h2>
+        <p>Discover the list of upcoming events managed by our system. Get ready to be a part of exciting and engaging
+            experiences brought to you by our team. Explore a variety of events ranging from music festivals to
+            educational workshops.</p>
+        <p>List Events: <a href="/list" class="link-button">Events list</a></p>
+    </div>
+    <div id="insert">
+        <h2>New Event Section</h2>
+        <p>Organize a new event by providing the necessary details. Let's create memorable experiences together! Whether
+            it's a community gathering or a corporate event, we've got you covered.</p>
+        <p>Add Event: <a href="/insert" class="link-button">Create New Event</a></p>
+    </div>
+    <div id="update">
+        <h2>Update Event Details Section</h2>
+        <p>Make modifications to the details of an existing event. Keep the information accurate and up-to-date. Whether
+            you need to change the date, venue, or featured guests, our system makes it easy for you.</p>
+        <p>Update Event Details: <a href="/update" class="link-button">Modify Event</a></p>
+    </div>
+    <div id="delete">
+        <h2>Delete Event Section</h2>
+        <p>If an event is no longer happening, you can remove it from our system. Choose this option to delete an event.
+            Your feedback is valuable in maintaining a relevant and dynamic events catalog.</p>
+        <p>Delete Event: <a href="/delete" class="link-button">Delete Event</a></p>
+    </div>
+    <div id="select">
+        <h2>Event Details Section</h2>
+        <p>Explore the details of a specific event. Get information about performers, dates, and contact details. Whether
+            you're a participant or an organizer, having access to detailed event information is crucial for a
+            successful experience.</p>
+        <p>Event Details: <a href="/select" class="link-button">View Event Details</a></p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fill</title>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Audiowide|Monoton|Neucha|Quicksand|Roboto" rel="stylesheet">
+<style>
+    body{
+        font-family: 'Quicksand',cursive;
+        background-image: url('static/Images/background.jpg');
+        background-size: cover;
+    }
+    .wrapper{
+        position: absolute;
+        margin-left: 39%;
+        display: inline-block;
+    }
+    .seat{
+        display: inline-block;
+        height: 60px;
+        width: 70px;
+        border:1px solid red;
+        text-align: center;
+        margin-top: 6px;
+        padding-top: 3%;
+        opacity: 0.5;
+        color: black;
+    }
+    .clickable{
+        border: 1px solid green;
+        background-color: transparent;
+        opacity: 1;
+    }
+
+    .clickable:hover{
+        background-color: green;
+    }
+    .prices{
+        position: absolute;
+        right:-135%;
+        top: 20%;
+        transform: scale(1.5);
+    }
+    .formfield{
+        margin-top: 10px;
+        margin-left: 6%;
+    }
+
+</style>
+<body>
+    <center><p style="font-family: 'Monoton',cursive; font-size: 50px; font-weight: normal;position: sticky;margin-top: -100px;margin: 10px 550px; z-index: 1000;">SELECT SEAT</p></center>
+    <div class="wrapper">
+        <div class="prices">
+            <table style="border:1px solid black">
+                <thead style="font-weight: bold;">
+                    <tr>
+                        <td>TYPE</td>
+                        <td>ROW</td>
+                        <td>AMOUNT</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Platinum</td>
+                        <td>A</td>
+                        <td>Rs.5000</td>
+                    </tr>
+                    <tr>
+                        <td>Gold</td>
+                        <td>B</td>
+                        <td>Rs.3000</td>
+                    </tr>
+                    <tr>
+                        <td>Silver</td>
+                        <td>C</td>
+                        <td>Rs.1500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        {% for seat in seats %}
+            {% if seat[4][1] == '1' %}
+                <br>
+            {% endif %}
+            {% if seat[5] == 0 %}
+                <div id='seatselect' class="seat clickable">{{ seat[4] }}</div>
+            {% else %}
+                <div id='seatselect' class="seat">{{ seat[4] }}</div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="formfield">
+        <form action="{{ url_for('bookseat') }}" method="POST">
+            <input type="text" name="eventid" value="{{ eventid }}" style="display: none;">
+            <label for="seatno">SEAT NO:</label> <input type="text" name="seatno" placeholder="SEAT NUMBER"><br><br>
+            <label for="name">NAME : </label><input type="text" name="name" placeholder="GUEST NAME"><br><br>
+            <label for="gender">GENDER : </label><input type="text" name="gender" placeholder="GENDER"><br><br>
+            <label for="dob"> DOB : </label><input type="date" name="dob"><br><br>
+            <label for="mobile"> MOBILE NO : </label><input type="number" name="mobile" placeholder="MOBILE NO"><br><br>
+            <span><input type="submit" name="Submit"></span>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-image: url('static/images/background.jpg');
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: #efeded;
+            max-width: 70%;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 10px;
+            overflow-y: auto;
+            height: 600px;
+        }
+
+        img.logo {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        input[type=text]:focus {
+            background-color: rgba(88, 84, 84, 0.068);
+            color: black;
+            border: 2px solid #555555;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            width: 80%;
+            padding: 12px;
+        }
+
+        input[type=submit] {
+            background-color: rgba(88, 84, 84, 0.068);
+            color: black;
+            border: 2px solid #555555;
+            font-size: 16px;
+            padding: 20px 28px;
+            transition-duration: 0.4s;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        input[type=submit]:hover {
+            background-color: #a09f9f;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Monoton', cursive;
+            font-size: 30px;
+            font-weight: normal;
+            color: rgb(29, 2, 2);
+            margin-left: 10px;
+        }
+
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 0;
+            border-top: 2px solid #555555;
+        }
+
+        .error-message {
+            color: red;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='container' style="padding: 20px;">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7a3ec529632909.55fc107b84b8c.png" class="logo" alt="Logo">
+        <br>
+        <h1 style="font-family: 'Monoton', cursive; font-size: 30px; font-weight: normal;">EVENT MANAGEMENT SYSTEM</h1>
+        <h2 style="font-family: 'Monoton', cursive; font-size: 30px; font-weight: normal;">ABC GROUND</h2>
+        <hr>
+        <h3 style="font-family: 'Monoton', cursive; font-size: 30px; font-weight: normal;">New Event</h3>
+        <hr>
+        {% if error %}
+            <div class="error-message">
+                {{ error }}
+            </div>
+        {% endif %}
+        <form method="POST" action="" style="display: flex; flex-direction: column; align-items: center;">
+
+            <label for="event_id">Event ID:</label>
+            <input type="text" id="event_id" name="event_id" style="padding: 12px; margin-bottom: 20px; width: 80%;" />
+
+            <label for="event_name">Event Name:</label>
+            <input type="text" id="event_name" name="event_name" style="padding: 12px; margin-bottom: 20px; width: 80%;" />
+
+            <label for="performer_name">Performer Name:</label>
+            <input type="text" id="performer_name" name="performer_name" style="padding: 12px; margin-bottom: 20px; width: 80%;" />
+
+            <label for="about_performer">About Performer:</label>
+            <textarea id="about_performer" name="about_performer" style="padding: 12px; margin-bottom: 20px; width: 80%;"></textarea>
+
+            <label for="event_date">Event Date:</label>
+            <input type="date" id="event_date" name="event_date" style="padding: 12px; margin-bottom: 20px; width: 80%;" />
+
+            <label for="event_time">Event Time:</label>
+            <input type="time" id="event_time" name="event_time" style="padding: 12px; margin-bottom: 20px; width: 80%;" />
+
+            <label for="event_type">Event Type:</label>
+            <input type="text" id="event_type" name="event_type" style="padding: 12px; margin-bottom: 20px; width: 80%;" />
+
+            <label for="contact_no">Contact No:</label>
+            <input type="text" id="contact_no" name="contact_no" style="padding: 12px; margin-bottom: 20px; width: 80%;" />
+
+            <label for="email_id">Email ID:</label>
+            <input type="text" id="email_id" name="email_id" style="padding: 12px; margin-bottom: 20px; width: 80%;" />
+
+            <input type="submit" value="ADD" style="padding: 15px; font-size: 16px; margin-top: 20px; width: 80%;" />
+        </form>
+    </div>
+</body>
+</html>
